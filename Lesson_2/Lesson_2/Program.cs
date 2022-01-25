@@ -10,6 +10,12 @@ namespace Lesson_2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите максимальную температуру за сегодня");
+            string max = Console.ReadLine(); float Max = Convert.ToSingle(max);
+            Console.WriteLine("Введите минимальную температуру за сегодня");
+            string min = Console.ReadLine(); float Min = Convert.ToSingle(min);
+            float averageTemp = Max + Min / 2;
+
             Console.WriteLine("Введите число от 1 до 12");
             string nameOfMonthInString = Console.ReadLine();
             int nameOfMonthInInt = Convert.ToInt32(nameOfMonthInString);
@@ -53,9 +59,25 @@ namespace Lesson_2
                     nameOfMonth = "Декабрь";
                     break;
                 default:
-                    break;
+                    return;
             }
-            Console.WriteLine(nameOfMonth);
+            bool WhenItsHotterInTheWinter = averageTemp > 0;
+            if (WhenItsHotterInTheWinter && nameOfMonth == "Декабрь") 
+            {
+                Console.WriteLine("Дождливая зима");
+            }
+            else if (WhenItsHotterInTheWinter && nameOfMonth == "Январь") 
+            {
+                Console.WriteLine("Дождливая зима");
+            }
+            else if (WhenItsHotterInTheWinter && nameOfMonth == "Февраль")
+            {
+                Console.WriteLine("Дождливая зима");
+            }
+            else
+            {
+                Console.WriteLine($"{nameOfMonth} {averageTemp}C");
+            }
         }
     }
 }
