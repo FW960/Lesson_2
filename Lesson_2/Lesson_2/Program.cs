@@ -1,72 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lesson_2
+namespace Lesson_2_Task6
 {
-    internal class Program
+    class Program
     {
+        [Flags]
+        public enum Weekdays
+        {
+            Понедельник = 0b_0000001,
+            Вторник = 0b_0000010,
+            Среда = 0b_0000100,
+            Четверг = 0b_0001000,
+            Пятница = 0b_0010000,
+            Суббота = 0b_0100000,
+            Воскресенье = 0b_1000000,
+        }
+
         static void Main(string[] args)
         {
-            WeekDays Office1 = (WeekDays)0b_0011000;
-            WeekDays Office2 = (WeekDays)0b_1100000;
-            WeekDays Office3 = (WeekDays)0b_0000111;
+            Weekdays WorkingDayOfOffice1 = Weekdays.Понедельник | Weekdays.Вторник;
+            Weekdays WorkingDayOfOffice2 = Weekdays.Среда | Weekdays.Четверг;
+            Weekdays WorkingDayOfOffice3 = Weekdays.Пятница | Weekdays.Суббота | Weekdays.Воскресенье;
+            
+            Console.WriteLine("Чтобы узнать дни работы офиса введите его номер:");
+            string dayOfWeekName = Console.ReadLine();
+            switch (dayOfWeekName)
+            {       case "1":
+                    Console.WriteLine($"Работа офиса: {WorkingDayOfOffice1}");
+                    Console.ReadLine();
+                    break;
 
-            WeekDays worksFromThurdayToFriday = WeekDays.Thurday | WeekDays.Friday;
-            WeekDays worksFromSaturdayToSunday = WeekDays.Saturday | WeekDays.Sunday;
-            WeekDays worksFromMondayToWednesday = WeekDays.Monday | WeekDays.Tuesday | WeekDays.Wednesday;
+                    case "2":
+                    Console.WriteLine($"Работа офиса: {WorkingDayOfOffice2}");
+                    Console.ReadLine();
+                    break;
 
-            WeekDays Office1WorkTime = Office1 & worksFromThurdayToFriday;
-            WeekDays Office2WorkTime = Office2 & worksFromSaturdayToSunday;
-            WeekDays Office3WorkTime = Office3 & worksFromMondayToWednesday;
+                    case "3":
+                    Console.WriteLine($"Работа офиса: {WorkingDayOfOffice3}");
+                    Console.ReadLine();
+                    break;
 
-            bool isOffice1ReallyWorkFromFridayToThurday = Office1 == Office1WorkTime;
-            bool isOffice2ReallyWorkFromSaturdayToSunday = Office2 == Office2WorkTime;
-            bool isOffice3ReallyWorkFromMondayyoWednesday = Office3 == Office3WorkTime;
+                    defalut:
+                    Console.WriteLine("Введите корректный номер офиса.");
+                    Console.ReadLine();
+                    break;
+                    }
+              
+                    
 
-            if (isOffice1ReallyWorkFromFridayToThurday == true)
-            {
-                Console.WriteLine("Офис 1 работает с четверга по пятницу");
-            }
-            else
-            {
-                Console.WriteLine("Офис 1 работает в другое время");
-            }
-            if (isOffice2ReallyWorkFromSaturdayToSunday == true)
-            {
-                Console.WriteLine("Офис 2 работает с субботу по воскресенье");
-            }
-            else
-            {
-                Console.WriteLine("Офис 2 работает в другое время");
-            }
-            if (isOffice3ReallyWorkFromMondayyoWednesday == true)
-            {
-                Console.WriteLine("Офис 3 работает с понедельника по среду");
-            }else
-            {
-                Console.WriteLine("Офис 3 работает в другое время");
-            }
-;
 
+                    
+
+
+
+
+                
+
+
+
+            
         }
-        [Flags]
-        public enum WeekDays
-        {
-            Monday =    0b_0000001,
-            Tuesday =   0b_0000010,
-            Wednesday = 0b_0000100,
-            Thurday =   0b_0001000,
-            Friday =    0b_0010000,
-            Saturday =  0b_0100000,
-            Sunday =    0b_1000000,
-        }
-
     }
-
-
 }
-
 
