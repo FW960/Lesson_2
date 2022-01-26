@@ -1,0 +1,8 @@
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\obj\Debug\Lesson_2.csproj.AssemblyReference.cache
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\obj\Debug\Lesson_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\obj\Debug\Lesson_2.csproj.CoreCompileInputs.cache
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\bin\Debug\Lesson_2.exe.config
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\bin\Debug\Lesson_2.exe
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\bin\Debug\Lesson_2.pdb
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\obj\Debug\Lesson_2.exe
+C:\Users\windo\OneDrive\Рабочий стол\Lesson_2\Lesson_2\Lesson_2\obj\Debug\Lesson_2.pdb
