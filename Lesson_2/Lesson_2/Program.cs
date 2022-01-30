@@ -10,52 +10,23 @@ namespace Lesson_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число от 1 до 12");
+            Console.WriteLine("Введите номер месяца:");
             string nameOfMonthInString = Console.ReadLine();
-            int nameOfMonthInInt = Convert.ToInt32(nameOfMonthInString);
-            string nameOfMonth = "";
-            switch (nameOfMonthInInt)
+            int Month = Convert.ToInt32(nameOfMonthInString);
+            bool correctMonthName = Month <= 12 && Month >= 1;
+            if (correctMonthName == true)
             {
-                case 1:
-                    nameOfMonth = "Январь";
-                    break;
-                case 2:
-                    nameOfMonth = "Февраль";
-                    break;
-                case 3:
-                    nameOfMonth = "Март";
-                    break;
-                case 4:
-                    nameOfMonth = "Апрель";
-                    break;
-                case 5:
-                    nameOfMonth = "Май";
-                    break;
-                case 6:
-                    nameOfMonth = "Июнь";
-                    break;
-                case 7:
-                    nameOfMonth = "Июль";
-                    break;
-                case 8:
-                    nameOfMonth = "Август";
-                    break;
-                case 9:
-                    nameOfMonth = "Сентябрь";
-                    break;
-                case 10:
-                    nameOfMonth = "Октябрь";
-                    break;
-                case 11:
-                    nameOfMonth = "Ноябрь";
-                    break;
-                case 12:
-                    nameOfMonth = "Декабрь";
-                    break;
-                default:
-                    break;
+                DateTime DateOfMonth = new DateTime(0001, Month, 01);
+                Console.WriteLine(DateOfMonth.ToString("MMMM"));
+                Console.ReadLine();
             }
-            Console.WriteLine(nameOfMonth);
+            else
+            {
+                Console.WriteLine("Введите корректный номер месяца");
+                Console.ReadLine();
+                return;
+            }
+            
         }
     }
 }
